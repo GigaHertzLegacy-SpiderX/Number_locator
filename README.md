@@ -1,7 +1,7 @@
 $ Installation $
 
 $ To install this on Linux -->
-1. git clone https://github.com/SpiderX360/Number_locator.git
+1. git clone https://github.com/GigaHertzLegacy-SpiderX/Number_locator.git
 2. cd Number_locator
 3. pip3 install -r requirements.txt
 4. python main.py
@@ -17,7 +17,7 @@ $ To install this on Windows -->
 $ To Install this in Termux -->
 1. pkg install git ( If you don't have )
 2. pkg install python3 ( If you don't have )
-3. git clone https://github.com/SpiderX360/Number_locator.git
+3. git clone https://github.com/GigaHertzLegacy-SpiderX/Number_locator.git
 4. cd Number_locator
 5. pip3 install -r requirements.txt
 6. python main.py
