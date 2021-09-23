@@ -10,21 +10,24 @@ from countryinfo import CountryInfo
 color_start = '\033[1;36m'
 color_end = '\033[1;0m'
 
+color_start_green = '\033[1;32m'
+color_end_green = '\033[1;0m'
+
 bold_start = '\033[1m'
 bold_end = '\033[0m'
 
-#Getting_number
-
 try:
+    print()
+    print(f"{color_start_green}", "$- Use (+) Before Typing The Number -$", f"{color_end_green}")
     print()
     user_input = input(f"{color_start}Enter the User Number With Country Code : {color_end}")
     user_mobile_number = phonenumbers.parse(user_input)
 
-#getting_info for capitaol
+    #getting_info for capitaol
     country_name = geocoder.description_for_number(user_mobile_number, 'en')
     capital = CountryInfo(country_name).capital()
 
-#Country, Sim Provider
+    #Country, Sim Provider
     print("")
     print(bold_start, "Country      : ", bold_end, end=" ")
     print(geocoder.description_for_number(user_mobile_number, "en"))
@@ -32,7 +35,7 @@ try:
     print(capital)
     print(bold_start, "Sim Provider : ", bold_end, end=" ")
     print(carrier.name_for_number(user_mobile_number, "en"))
-# initialize Nominatim API
+    # initialize Nominatim API
     geolocator = Nominatim(user_agent="NumberTracer")
 
     location = geolocator.geocode(geocoder.description_for_number(user_mobile_number, 'en'))
